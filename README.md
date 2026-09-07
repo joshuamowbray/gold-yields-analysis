@@ -13,6 +13,6 @@ The project currently includes:
 
 ## Structure
 
-data/ - raw and processed datasets
-notebooks/ - exploratory analysis
-src/ - data processing script and reusable rolling regression function
+- `data/` — raw and processed datasets
+- `notebooks/` — exploratory analysis
+- `src/` — data processing script and reusable rolling regression function
