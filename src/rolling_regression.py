@@ -7,14 +7,17 @@ def time_rolling_regression(df, time_window, x_label, y_label, freq ='ME'):
     intercepts = []
     r2score = []
 
+#Loop through every window in the dataset
     for i in pd.date_range(df.first_valid_index()+time_window, df.index[-1],freq = freq):
-        
+
+
         x_window = df[x_label].loc[i-time_window:i].to_frame()
         y_window = df[y_label].loc[i-time_window:i].to_frame()
-
+#Linear regression of the data within the window
         model = LinearRegression()
         model.fit(x_window, y_window)
 
+#Find R2 coefficient and intercept values and append them to the lists to be returned
         r2 = r2_score(y_window, model.predict(x_window))
         coeff = model.coef_
         intercept = model.intercept_

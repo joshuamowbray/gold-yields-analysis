@@ -27,5 +27,5 @@ real_yields['Real Yield (bp Change)'] = real_yields['Real Yield'].diff()*100
 #Gold and yields into one larger dataframe
 comparison = gold.join([nominal_yields,real_yields], how = 'inner').dropna()
 
-
+#Export to processed folder
 comparison.to_csv('../data/processed/full_table.csv')
