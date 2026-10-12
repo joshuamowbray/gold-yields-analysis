@@ -11,6 +11,13 @@ The project currently includes:
 - Rolling linear regression representing the change in relationship between gold prices and bond yields (nominal and real yields are compared) over time
 - Visualisation of these results (All found in /notebooks which contains the exploratory research notebooks)
 
+## Steps to be completed
+- Move analysis over to statsmodels library to make statistical inference easier (can also use inbuilt rolling OLS)
+- Assess statistical significance of findings
+- Assess and correct potential errors such as autocorrelation and heteroskedasticity
+- Consider additional factors such as the value of the dollar
+- Finalise a full report and visualise findings
+
 ## Structure
 
 - `data/` — raw and processed datasets
